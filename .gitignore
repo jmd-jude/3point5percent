@@ -1,0 +1,56 @@
+# Automation scripts (keep pipeline private)
+news_discovery_rss.py
+news_categorizer.py
+news_newsletter_generator.py
+
+# Environment variables (contains API keys - NEVER commit!)
+.env
+.env.local
+.env.production
+
+# Python virtual environment
+news_env/
+venv/
+env/
+.venv/
+
+# Personal notes
+notes.txt
+notes.md
+docs/
+
+# Newsletters
+newsletters/
+/newsletters
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Database files (if any)
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup

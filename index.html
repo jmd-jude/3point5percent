@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Positive Resistance Weekly: Community Action & Grassroots Organizing Newsletter</title>
+  <meta name="description" content="Positive Resistance Weekly is your source for inspiring stories of community action, faith-based organizing, legal victories, and grassroots resistance to harmful policies. Weekly curated stories of positive change.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #666;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #667eea;
+    }
+
+    .divider {
+      color: #ccc;
+    }
+
+    /* Main Content */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 4rem;
+      padding: 4rem 0;
+      min-height: calc(100vh - 80px);
+      align-items: center;
+    }
+
+    .content {
+      color: white;
+    }
+
+    .title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #fff, #e0e7ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      opacity: 0.8;
+      max-width: 500px;
+    }
+
+    /* Subscribe Form */
+    .subscribe-form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .email-input-group {
+      display: flex;
+      gap: 0;
+      margin-bottom: 1rem;
+    }
+
+    .email-input {
+      flex: 1;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      font-size: 1rem;
+      background: white;
+      color: #333;
+    }
+
+    .email-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+    }
+
+    .subscribe-btn {
+      padding: 1rem 2rem;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .subscribe-btn:hover {
+      background: #5a67d8;
+    }
+
+    .form-note {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-align: center;
+    }
+
+    .stats {
+      display: flex;
+      gap: 2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Read Latest Button */
+    .read-latest {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 1rem;
+    }
+
+    .read-latest:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Device Mockup */
+    .device-preview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .device {
+      width: 300px;
+      height: 600px;
+      background: #1a1a1a;
+      border-radius: 30px;
+      padding: 10px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .device::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: #333;
+      border-radius: 2px;
+    }
+
+    .device::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      border: 2px solid #333;
+      border-radius: 50%;
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .newsletter-preview {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+
+    footer p {
+      opacity: 0.8;
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .device {
+        width: 250px;
+        height: 500px;
+      }
+
+      .email-input-group {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .email-input, .subscribe-btn {
+        border-radius: 8px;
+      }
+
+      .stats {
+        justify-content: center;
+      }
+
+      .nav-links {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">Positive Resistance Weekly</a>
+        <div class="nav-links">
+          <a href="#" target="_blank">Archives</a>
+          <span class="divider">|</span>
+          <a href="./latest.html">Preview</a>
+          <span class="divider">|</span>
+          <a href="#" target="_blank">Subscribe</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="content">
+      <h1 class="title">Positive Resistance Weekly</h1>
+      <h2 class="subtitle">Community Action & Grassroots Organizing</h2>
+      <p class="description">
+        Your source for inspiring stories of community action, faith-based organizing, legal victories, and grassroots resistance. 
+        Weekly curated stories of positive change from communities choosing hope over fear and action over despair.
+      </p>
+
+      <div class="subscribe-form">
+        <!-- Clean email input that redirects to Substack -->
+        <div class="email-input-group">
+          <input type="email" class="email-input" placeholder="Enter your email address" required id="email-signup">
+          <button type="button" class="subscribe-btn" onclick="redirectToSubstack()">Subscribe</button>
+        </div>
+        <p class="form-note">Join community organizers and engaged citizens discovering positive action every week</p>
+      </div>
+
+      <!--
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number" id="story-count">5+</div>
+          <div class="stat-label">Stories Featured</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="issues-count">1</div>
+          <div class="stat-label">Issues Published</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">Weekly</div>
+          <div class="stat-label">Delivery</div>
+        </div>
+      </div>
+        -->
+
+      <a href="#" target="_blank" class="read-latest">Read Issue #1 →</a>
+      <p style="opacity: 0.8; margin-top: 1rem;">
+        Or check out <a href="./latest.html" target="_blank" style="color: white; text-decoration: underline;">our newsletter preview</a>.
+      </p>
+    </div>
+
+    <div class="device-preview">
+      <div class="device">
+        <div class="screen">
+          <iframe src="./latest.html" class="newsletter-preview" scrolling="yes"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Published independently • Positive Resistance Weekly</p>
+      <p style="font-size: 0.9rem;">Highlighting community-driven positive action across America</p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to redirect to Substack with pre-filled email
+    function redirectToSubstack() {
+      const email = document.getElementById('email-signup').value;
+      if (email && email.includes('@')) {
+        // Open Substack signup with pre-filled email
+        window.open(`https://positiveresistance.substack.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
+      } else if (email) {
+        // If invalid email, just go to Substack
+        window.open('https://positiveresistance.substack.com/subscribe', '_blank');
+      } else {
+        // If no email, go to Substack
+        window.open('https://positiveresistance.substack.com/subscribe', '_blank');
+      }
+    }
+
+    // Load newsletter data and update stats
+    function updateStats() {
+      try {
+        // Create a hidden iframe to load newsletter data
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = './latest.html';
+        
+        iframe.onload = function() {
+          try {
+            const newsletterData = iframe.contentWindow.newsletterData;
+            if (newsletterData) {
+              // Update issues count
+              const issuesElement = document.getElementById('issues-count');
+              if (issuesElement) {
+                issuesElement.textContent = newsletterData.issueNumber;
+              }
+              
+              // Update story count if available
+              const storyElement = document.getElementById('story-count');
+              if (storyElement && newsletterData.storyCount) {
+                storyElement.textContent = newsletterData.storyCount + '+';
+              }
+            }
+          } catch (e) {
+            console.log('Could not access newsletter data, using defaults');
+          }
+          
+          // Clean up
+          document.body.removeChild(iframe);
+        };
+        
+        iframe.onerror = function() {
+          console.log('Could not load newsletter data, using defaults');
+          document.body.removeChild(iframe);
+        };
+        
+        document.body.appendChild(iframe);
+      } catch (e) {
+        console.log('Using default stats');
+      }
+    }
+
+    // Allow Enter key to submit
+    document.addEventListener('DOMContentLoaded', function() {
+      const emailInput = document.getElementById('email-signup');
+      if (emailInput) {
+        emailInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            redirectToSubstack();
+          }
+        });
+      }
+      
+      // Update stats from newsletter data
+      updateStats();
+    });
+
+    // Make the newsletter preview scrollable with smooth behavior
+    const preview = document.querySelector('.newsletter-preview');
+    if (preview) {
+      preview.style.scrollBehavior = 'smooth';
+    }
+  </script>
+</body>
+</html>
