@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Positive Resistance Weekly: Community Action & Grassroots Organizing Newsletter</title>
-  <meta name="description" content="Positive Resistance Weekly is your source for inspiring stories of community action, faith-based organizing, legal victories, and grassroots resistance to harmful policies. Weekly curated stories of positive change.">
+  <title>3.5 Percent Weekly: Building the Critical Mass for Change</title>
+  <meta name="description" content="3.5 Percent Weekly tracks the communities and movements building toward the critical mass for nonviolent change. Weekly stories of the organizing, legal victories, and local action creating lasting transformation.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="/favicon.ico">
@@ -60,7 +60,7 @@
     }
 
     .nav-links a {
-      color: #298;
+      color: #666;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
@@ -140,7 +140,7 @@
 
     .email-input:focus {
       outline: none;
-      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.3);
     }
 
     .subscribe-btn {
@@ -156,7 +156,7 @@
     }
 
     .subscribe-btn:hover {
-      background: #5a67d8;
+      background: #1f618d;
     }
 
     .form-note {
@@ -328,7 +328,7 @@
   <header>
     <div class="container">
       <nav>
-        <a href="/" class="logo">Positive Resistance Weekly</a>
+        <a href="/" class="logo">3.5 Percent Weekly</a>
         <div class="nav-links">
           <a href="#" target="_blank">Archives</a>
           <span class="divider">|</span>
@@ -342,11 +342,11 @@
 
   <main class="container">
     <div class="content">
-      <h1 class="title">Positive Resistance Weekly</h1>
-      <h2 class="subtitle">Community Action & Grassroots Organizing</h2>
+      <h1 class="title">3.5 Percent Weekly</h1>
+      <h2 class="subtitle">Building the Critical Mass for Change</h2>
       <p class="description">
-        Your source for inspiring stories of community action, faith-based organizing, legal victories, and grassroots resistance. 
-        Weekly curated stories of positive change from communities choosing hope over fear and action over despair.
+        Research shows that when just 3.5% of people actively participate in sustained nonviolent movements, those movements succeed. 
+        We track the communities, organizers, and local victories building toward that critical mass for lasting change.
       </p>
 
       <div class="subscribe-form">
@@ -355,7 +355,7 @@
           <input type="email" class="email-input" placeholder="Enter your email address" required id="email-signup">
           <button type="button" class="subscribe-btn" onclick="redirectToSubstack()">Subscribe</button>
         </div>
-        <p class="form-note">Join community organizers and engaged citizens discovering positive action every week</p>
+        <p class="form-note">Join organizers and changemakers tracking the movement toward 3.5%</p>
       </div>
 
       <!--
@@ -392,8 +392,8 @@
 
   <footer>
     <div class="container">
-      <p>Published independently • Positive Resistance Weekly</p>
-      <p style="font-size: 0.9rem;">Highlighting community-driven positive action across America</p>
+      <p>Published independently • 3.5 Percent Weekly</p>
+      <p style="font-size: 0.9rem;">Tracking the movements building critical mass for change</p>
     </div>
   </footer>
 
@@ -403,13 +403,13 @@
       const email = document.getElementById('email-signup').value;
       if (email && email.includes('@')) {
         // Open Substack signup with pre-filled email
-        window.open(`https://positiveresistance.substack.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
+        window.open(`https://3point5percent.substack.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
       } else if (email) {
         // If invalid email, just go to Substack
-        window.open('https://positiveresistance.substack.com/subscribe', '_blank');
+        window.open('https://3point5percent.substack.com/subscribe', '_blank');
       } else {
         // If no email, go to Substack
-        window.open('https://positiveresistance.substack.com/subscribe', '_blank');
+        window.open('https://3point5percent.substack.com/subscribe', '_blank');
       }
     }
 
