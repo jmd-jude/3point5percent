@@ -1,6 +1,6 @@
 # 3point5percent Project Overview
 
-## What is 3point5percent?
+## What is 3point5percent
 
 **3point5percent** is a curated newsletter focused on grassroots community action, local policy innovation, and positive resistance to harmful federal policies. It highlights stories of faith communities, legal advocates, local organizers, educators and ordinary citizens who are taking constructive action to protect their neighbors and uphold their values, transforming passive, sometimes debilitating concern into active community engagement and a force for good.
 
