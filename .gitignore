@@ -2,6 +2,7 @@
 news_discovery_rss.py
 news_categorizer.py
 news_newsletter_generator.py
+debug_sources.py
 
 # Environment variables (contains API keys - NEVER commit!)
 .env
