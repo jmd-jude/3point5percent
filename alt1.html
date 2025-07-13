@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>3.5 Percent Weekly: Building the Critical Mass for Change</title>
+  <meta name="description" content="3.5 Percent Weekly tracks the communities and movements building toward the critical mass for nonviolent change. Weekly stories of the organizing, legal victories, and local action creating lasting transformation.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Serif+Pro:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Source Serif Pro', Georgia, serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #ffffff;
+    }
+
+    /* Hero Section with Background */
+    .hero {
+      height: 100vh;
+      background: 
+        linear-gradient(
+          135deg, 
+          rgba(0, 0, 0, 0.7) 0%, 
+          rgba(0, 0, 0, 0.4) 50%,
+          rgba(0, 0, 0, 0.6) 100%
+        ),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f8f9fa" width="1200" height="800"/><g fill="%23dee2e6" opacity="0.3"><circle cx="200" cy="150" r="40"/><circle cx="800" cy="200" r="60"/><circle cx="400" cy="400" r="35"/><circle cx="1000" cy="300" r="45"/><circle cx="600" cy="600" r="50"/><path d="M100,100 Q300,200 500,150 T900,200" stroke="%23adb5bd" stroke-width="2" fill="none"/><path d="M200,400 Q400,300 600,350 T1000,400" stroke="%23adb5bd" stroke-width="2" fill="none"/></g></svg>');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Header */
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: #d63384;
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #d63384;
+      transition: width 0.2s;
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    .divider {
+      color: #ccc;
+      font-weight: 300;
+    }
+
+    /* Hero Content */
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      color: white;
+      z-index: 10;
+      position: relative;
+    }
+
+    .kicker {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f8f9fa;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-family: 'Source Serif Pro', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      opacity: 0.95;
+    }
+
+    .hero-description {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      max-width: 550px;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    /* Subscribe Section */
+    .subscribe-section {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      padding: 2.5rem;
+      max-width: 500px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .subscribe-header {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-subtext {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #6c757d;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .email-input {
+      padding: 1.2rem;
+      border: 2px solid #e9ecef;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #1a1a1a;
+      transition: border-color 0.2s;
+    }
+
+    .email-input:focus {
+      outline: none;
+      border-color: #d63384;
+    }
+
+    .subscribe-btn {
+      padding: 1.2rem 2rem;
+      background: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .subscribe-btn:hover {
+      background: #d63384;
+      transform: translateY(-1px);
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 6rem 0;
+      background: #f8f9fa;
+    }
+
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .main-content {
+      background: white;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .content-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .content-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #495057;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #d63384;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.01em;
+      transition: all 0.2s;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button:hover {
+      background: #b02a5b;
+      transform: translateY(-1px);
+    }
+
+    .preview-link {
+      color: #6c757d;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    .preview-link a {
+      color: #d63384;
+      text-decoration: underline;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      height: fit-content;
+      position: sticky;
+      top: 2rem;
+    }
+
+    .sidebar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 0.5rem;
+    }
+
+    .newsletter-preview-frame {
+      width: 100%;
+      height: 400px;
+      border: 1px solid #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .newsletter-preview {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #adb5bd;
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    footer a {
+      color: #f8f9fa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .content-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .main-content,
+      .sidebar {
+        padding: 2rem;
+      }
+
+      .subscribe-section {
+        padding: 2rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    /* Accent elements */
+    .accent-line {
+      width: 60px;
+      height: 3px;
+      background: #d63384;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">3.5 Percent Weekly</a>
+      <div class="nav-links">
+        <a href="https://3point5percent.substack.com/" target="_blank">Archives</a>
+        <span class="divider">|</span>
+        <a href="./latest.html">Preview</a>
+        <span class="divider">|</span>
+        <a href="https://3point5percent.substack.com/subscribe" target="_blank">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="kicker">Independent Journalism</div>
+      <h1 class="hero-title">3.5 Percent Weekly</h1>
+      <h2 class="hero-subtitle">Building the Critical Mass for Change</h2>
+      <p class="hero-description">
+        While headlines focus on what's breaking, we document what's building. We track the teachers, organizers, business leaders, faith communities, public servants, and ordinary citizens who are creating positive change from wherever they stand.
+      </p>
+      
+      <div class="subscribe-section">
+        <h3 class="subscribe-header">Join the Documentation</h3>
+        <p class="subscribe-subtext">Get proof points that we're closer to the 3.5% tipping point for unstoppable change than it might feel.</p>
+        <form class="email-form">
+          <input type="email" class="email-input" placeholder="Enter your email address" required id="email-signup">
+          <button type="button" class="subscribe-btn" onclick="redirectToSubstack()">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-container">
+      <div class="main-content">
+        <h2 class="content-title">An Antidote to Endless Negativity</h2>
+        <div class="accent-line"></div>
+        <p class="content-text">
+          Research shows that when just 3.5% of people actively participate in sustained nonviolent movements, those movements succeed. We're documenting the proof points that this critical mass is already building—in institutions, organizations, and communities of every kind.
+        </p>
+        <p class="content-text">
+          Think of it as evidence that ordinary people in every kind of role are creating extraordinary progress. From legal victories protecting fundamental rights to faith communities adapting to serve the most vulnerable, from public servants finding ways to help to neighbors organizing solutions.
+        </p>
+        <p class="content-text">
+          This isn't just feel-good journalism. It's strategic documentation of the momentum that's already happening, creating an antidote to negativity and proof that change is closer than it feels.
+        </p>
+        
+        <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="cta-button">Read Issue #1</a>
+        <p class="preview-link">
+          Or explore <a href="./latest.html" target="_blank">our newsletter preview</a> to see the stories we're tracking.
+        </p>
+      </div>
+
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Latest Issue</h3>
+        <div class="newsletter-preview-frame">
+          <iframe src="./latest.html" class="newsletter-preview" scrolling="yes"></iframe>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p><strong>Independent Publication</strong> • 3.5 Percent Weekly</p>
+      <p>Documenting the movements building critical mass for change</p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to redirect to Substack with pre-filled email
+    function redirectToSubstack() {
+      const email = document.getElementById('email-signup').value;
+      if (email && email.includes('@')) {
+        window.open(`https://3point5percent.substack.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
+      } else if (email) {
+        window.open('https://3point5percent.substack.com/subscribe', '_blank');
+      } else {
+        window.open('https://3point5percent.substack.com/subscribe', '_blank');
+      }
+    }
+
+    // Allow Enter key to submit
+    document.addEventListener('DOMContentLoaded', function() {
+      const emailInput = document.getElementById('email-signup');
+      if (emailInput) {
+        emailInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            redirectToSubstack();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

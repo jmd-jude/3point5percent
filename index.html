@@ -5,7 +5,7 @@
   <title>3.5 Percent Weekly: Building the Critical Mass for Change</title>
   <meta name="description" content="3.5 Percent Weekly tracks the communities and movements building toward the critical mass for nonviolent change. Weekly stories of the organizing, legal victories, and local action creating lasting transformation.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="/favicon.ico">
   
   <style>
@@ -16,10 +16,10 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #2980b9 0%, #6bb6ff 100%);
+      color: #2d2d2d;
+      background: linear-gradient(135deg, #f7f3e9 0%, #e8dcc6 100%);
       min-height: 100vh;
     }
 
@@ -31,12 +31,13 @@
 
     /* Header */
     header {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 3px solid #d4a574;
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     nav {
@@ -47,79 +48,140 @@
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-family: 'Crimson Text', serif;
+      font-size: 1.8rem;
       font-weight: 700;
-      color: #2980b9;
+      color: #8b4513;
       text-decoration: none;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .nav-links a {
-      color: #666;
+      color: #5d4e37;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.2s;
+      position: relative;
     }
 
     .nav-links a:hover {
-      color: #2980b9;
+      color: #8b4513;
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #d4a574;
+      transition: width 0.2s;
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
     }
 
     .divider {
-      color: #ccc;
+      color: #d4a574;
+      font-weight: bold;
     }
 
     /* Main Content */
     main {
       display: grid;
-      grid-template-columns: 1fr 400px;
+      grid-template-columns: 1fr 380px;
       gap: 4rem;
-      padding: 4rem 0;
+      padding: 5rem 0 3rem 0;
       min-height: calc(100vh - 80px);
       align-items: center;
     }
 
     .content {
-      color: white;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 2px solid #e8dcc6;
+      position: relative;
+      margin-top: 2rem;
+    }
+
+    .content:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      background: #d4a574;
+      border-radius: 50%;
+      box-shadow: 
+        40px 0 #d4a574,
+        80px 0 #d4a574;
     }
 
     .title {
-      font-size: 3.5rem;
+      font-family: 'Crimson Text', serif;
+      font-size: 3.2rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      background: linear-gradient(45deg, #fff, #e0e7ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #8b4513;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      line-height: 1.1;
     }
 
     .subtitle {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      font-weight: 400;
+      font-family: 'Crimson Text', serif;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      color: #5d4e37;
+      font-weight: 600;
+      font-style: italic;
     }
 
     .description {
       font-size: 1.1rem;
-      margin-bottom: 3rem;
-      opacity: 0.8;
-      max-width: 500px;
+      margin-bottom: 2rem;
+      color: #444;
+      line-height: 1.7;
     }
 
     /* Subscribe Form */
     .subscribe-form {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
+      background: #fff;
+      border: 3px solid #d4a574;
+      border-radius: 8px;
       padding: 2rem;
       margin-bottom: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transform: rotate(-0.5deg);
+      position: relative;
+    }
+
+    .subscribe-form:before {
+      content: "📌";
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      font-size: 1.5rem;
+      transform: rotate(15deg);
+    }
+
+    .form-header {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #8b4513;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
     .email-input-group {
@@ -131,126 +193,107 @@
     .email-input {
       flex: 1;
       padding: 1rem 1.5rem;
-      border: none;
-      border-radius: 8px 0 0 8px;
+      border: 2px solid #d4a574;
+      border-radius: 6px 0 0 6px;
       font-size: 1rem;
-      background: white;
+      background: #fefefe;
       color: #333;
+      font-family: inherit;
     }
 
     .email-input:focus {
       outline: none;
-      box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.3);
+      border-color: #8b4513;
+      background: white;
     }
 
     .subscribe-btn {
       padding: 1rem 2rem;
-      background: #2980b9;
+      background: #8b4513;
       color: white;
-      border: none;
-      border-radius: 0 8px 8px 0;
+      border: 2px solid #8b4513;
+      border-radius: 0 6px 6px 0;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: all 0.2s;
+      font-family: inherit;
     }
 
     .subscribe-btn:hover {
-      background: #1f618d;
+      background: #5d4e37;
+      border-color: #5d4e37;
+      transform: translateY(-1px);
     }
 
     .form-note {
       font-size: 0.9rem;
-      opacity: 0.8;
+      color: #666;
       text-align: center;
+      line-height: 1.4;
     }
 
-    .stats {
-      display: flex;
-      gap: 2rem;
-      opacity: 0.9;
-      margin-bottom: 2rem;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    /* Read Latest Button */
     .read-latest {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: rgba(255, 255, 255, 0.2);
+      padding: 1rem 1.5rem;
+      background: #f4a261;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 6px;
       font-weight: 600;
       transition: all 0.2s;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transform: rotate(0.5deg);
       margin-bottom: 1rem;
     }
 
     .read-latest:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
+      background: #e76f51;
+      transform: rotate(0.5deg) translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    /* Device Mockup */
+    .preview-note {
+      color: #666;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    .preview-note a {
+      color: #8b4513;
+      text-decoration: underline;
+    }
+
+    /* Device Mockup - Bulletin Board Style */
     .device-preview {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .device {
-      width: 300px;
-      height: 600px;
-      background: #1a1a1a;
-      border-radius: 30px;
-      padding: 10px;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     }
 
-    .device::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 4px;
-      background: #333;
-      border-radius: 2px;
+    .bulletin-frame {
+      width: 320px;
+      height: 580px;
+      background: #8b4513;
+      border-radius: 8px;
+      padding: 15px;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transform: rotate(2deg);
     }
 
-    .device::after {
-      content: '';
-      position: absolute;
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 30px;
-      border: 2px solid #333;
-      border-radius: 50%;
-    }
-
-    .screen {
+    .cork-board {
       width: 100%;
       height: 100%;
-      background: white;
-      border-radius: 20px;
+      background: 
+        radial-gradient(circle at 20% 20%, #d2b48c 2px, transparent 2px),
+        radial-gradient(circle at 80% 20%, #d2b48c 2px, transparent 2px),
+        radial-gradient(circle at 20% 80%, #d2b48c 2px, transparent 2px),
+        radial-gradient(circle at 80% 80%, #d2b48c 2px, transparent 2px),
+        #deb887;
+      background-size: 40px 40px;
+      border-radius: 4px;
       overflow: hidden;
       position: relative;
     }
@@ -259,27 +302,41 @@
       width: 100%;
       height: 100%;
       border: none;
-      border-radius: 20px;
+      border-radius: 4px;
+      background: white;
     }
+
+    /* Push pins */
+    .push-pin {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+
+    .pin-1 { top: 10px; left: 20px; background: #ff6b6b; }
+    .pin-2 { top: 10px; right: 20px; background: #4ecdc4; }
+    .pin-3 { bottom: 10px; left: 20px; background: #45b7d1; }
+    .pin-4 { bottom: 10px; right: 20px; background: #96ceb4; }
 
     /* Footer */
     footer {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      color: white;
+      background: rgba(255, 255, 255, 0.8);
+      border-top: 3px solid #d4a574;
+      color: #5d4e37;
       text-align: center;
       padding: 2rem 0;
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
 
     footer p {
-      opacity: 0.8;
       margin-bottom: 0.5rem;
     }
 
     footer a {
-      color: white;
+      color: #8b4513;
       text-decoration: none;
     }
 
@@ -291,17 +348,23 @@
     @media (max-width: 768px) {
       main {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
         text-align: center;
+      }
+
+      .content {
+        margin: 0 10px;
+        padding: 2rem;
       }
 
       .title {
         font-size: 2.5rem;
       }
 
-      .device {
-        width: 250px;
+      .bulletin-frame {
+        width: 280px;
         height: 500px;
+        transform: rotate(1deg);
       }
 
       .email-input-group {
@@ -310,17 +373,23 @@
       }
 
       .email-input, .subscribe-btn {
-        border-radius: 8px;
-      }
-
-      .stats {
-        justify-content: center;
+        border-radius: 6px;
       }
 
       .nav-links {
-        gap: 0.5rem;
+        gap: 0.8rem;
         font-size: 0.9rem;
       }
+    }
+
+    /* Subtle animations */
+    @keyframes gentle-float {
+      0%, 100% { transform: translateY(0px) rotate(2deg); }
+      50% { transform: translateY(-5px) rotate(2deg); }
+    }
+
+    .bulletin-frame {
+      animation: gentle-float 6s ease-in-out infinite;
     }
   </style>
 </head>
@@ -330,11 +399,11 @@
       <nav>
         <a href="/" class="logo">3.5 Percent Weekly</a>
         <div class="nav-links">
-          <a href="#" target="_blank">Archives</a>
-          <span class="divider">|</span>
+          <a href="https://3point5percent.substack.com/" target="_blank">Archives</a>
+          <span class="divider">•</span>
           <a href="./latest.html">Preview</a>
-          <span class="divider">|</span>
-          <a href="#" target="_blank">Subscribe</a>
+          <span class="divider">•</span>
+          <a href="https://3point5percent.substack.com/subscribe" target="_blank">Subscribe</a>
         </div>
       </nav>
     </div>
@@ -345,45 +414,31 @@
       <h1 class="title">3.5 Percent Weekly</h1>
       <h2 class="subtitle">Building the Critical Mass for Change</h2>
       <p class="description">
-        Research shows that when just 3.5% of people actively participate in sustained nonviolent movements, those movements succeed. 
-        We track the communities, organizers, and local victories building toward that critical mass for lasting change.
+        While headlines focus on what's breaking, we find what's building. We track the teachers, organizers, business leaders, faith communities, public servants, and ordinary citizens who are creating positive change from wherever they stand. Think of it as an antidote to negativity and proof that we're closer to the 3.5% tipping point for unstoppable change than it might feel.
       </p>
 
       <div class="subscribe-form">
-  <!-- Clean email input that redirects to Substack -->
-      <div class="email-input-group">
-        <input type="email" class="email-input" placeholder="Enter your email address" required id="email-signup">
-        <button type="button" class="subscribe-btn" onclick="redirectToSubstack()">Subscribe</button>
-      </div>
-      <p class="form-note">Join organizers and changemakers tracking the movement toward 3.5%</p>
+        <div class="form-header">Join the Movement</div>
+        <div class="email-input-group">
+          <input type="email" class="email-input" placeholder="Enter your email address" required id="email-signup">
+          <button type="button" class="subscribe-btn" onclick="redirectToSubstack()">Subscribe</button>
+        </div>
+        <p class="form-note">Join organizers and changemakers tracking the momentum toward 3.5%</p>
       </div>
 
-      <!--
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-number" id="story-count">5+</div>
-          <div class="stat-label">Stories Featured</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number" id="issues-count">1</div>
-          <div class="stat-label">Issues Published</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">Weekly</div>
-          <div class="stat-label">Delivery</div>
-        </div>
-      </div>
-        -->
-
-      <a href="#" target="_blank" class="read-latest">Read Issue #1 →</a>
-      <p style="opacity: 0.8; margin-top: 1rem;">
-        Or check out <a href="./latest.html" target="_blank" style="color: white; text-decoration: underline;">our newsletter preview</a>.
+      <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="read-latest">Read Issue #1 →</a>
+      <p class="preview-note">
+        Or check out <a href="./latest.html" target="_blank">our newsletter preview</a> to see the stories we're tracking.
       </p>
     </div>
 
     <div class="device-preview">
-      <div class="device">
-        <div class="screen">
+      <div class="bulletin-frame">
+        <div class="push-pin pin-1"></div>
+        <div class="push-pin pin-2"></div>
+        <div class="push-pin pin-3"></div>
+        <div class="push-pin pin-4"></div>
+        <div class="cork-board">
           <iframe src="./latest.html" class="newsletter-preview" scrolling="yes"></iframe>
         </div>
       </div>
@@ -392,7 +447,7 @@
 
   <footer>
     <div class="container">
-      <p>Published independently • 3.5 Percent Weekly</p>
+      <p><strong>Published independently</strong> • 3.5 Percent Weekly</p>
       <p style="font-size: 0.9rem;">Tracking the movements building critical mass for change</p>
     </div>
   </footer>
@@ -402,57 +457,11 @@
     function redirectToSubstack() {
       const email = document.getElementById('email-signup').value;
       if (email && email.includes('@')) {
-        // Open Substack signup with pre-filled email
         window.open(`https://3point5percent.substack.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
       } else if (email) {
-        // If invalid email, just go to Substack
         window.open('https://3point5percent.substack.com/subscribe', '_blank');
       } else {
-        // If no email, go to Substack
         window.open('https://3point5percent.substack.com/subscribe', '_blank');
-      }
-    }
-
-    // Load newsletter data and update stats
-    function updateStats() {
-      try {
-        // Create a hidden iframe to load newsletter data
-        const iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = './latest.html';
-        
-        iframe.onload = function() {
-          try {
-            const newsletterData = iframe.contentWindow.newsletterData;
-            if (newsletterData) {
-              // Update issues count
-              const issuesElement = document.getElementById('issues-count');
-              if (issuesElement) {
-                issuesElement.textContent = newsletterData.issueNumber;
-              }
-              
-              // Update story count if available
-              const storyElement = document.getElementById('story-count');
-              if (storyElement && newsletterData.storyCount) {
-                storyElement.textContent = newsletterData.storyCount + '+';
-              }
-            }
-          } catch (e) {
-            console.log('Could not access newsletter data, using defaults');
-          }
-          
-          // Clean up
-          document.body.removeChild(iframe);
-        };
-        
-        iframe.onerror = function() {
-          console.log('Could not load newsletter data, using defaults');
-          document.body.removeChild(iframe);
-        };
-        
-        document.body.appendChild(iframe);
-      } catch (e) {
-        console.log('Using default stats');
       }
     }
 
@@ -466,16 +475,7 @@
           }
         });
       }
-      
-      // Update stats from newsletter data
-      updateStats();
     });
-
-    // Make the newsletter preview scrollable with smooth behavior
-    const preview = document.querySelector('.newsletter-preview');
-    if (preview) {
-      preview.style.scrollBehavior = 'smooth';
-    }
   </script>
 </body>
 </html>
