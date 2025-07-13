@@ -7,7 +7,7 @@ from supabase import create_client
 
 def get_system_health(supabase):
     """Get overall system health metrics"""
-    from datetime import datetime, timedelta
+    from datetime import datetime, timedelta, timezone
     
     # Get all articles
     all_articles = supabase.table('news_articles').select('*').execute()
@@ -23,7 +23,7 @@ def get_system_health(supabase):
         }
     
     articles = all_articles.data
-    now = datetime.now()
+    now = datetime.now(timezone.utc)  # Make timezone-aware
     
     return {
         'total_articles': len(articles),
