@@ -3,6 +3,9 @@ news_discovery_rss.py
 news_categorizer.py
 news_newsletter_generator.py
 debug_sources.py
+google_feed_builder.py
+google_news_feeds.sql
+google_news_feeds.json
 
 # Environment variables (contains API keys - NEVER commit!)
 .env
@@ -10,7 +13,7 @@ debug_sources.py
 .env.production
 
 # Python virtual environment
-news_env/
+news_venv/
 venv/
 env/
 .venv/
