@@ -6,6 +6,9 @@ debug_sources.py
 google_feed_builder.py
 google_news_feeds.sql
 google_news_feeds.json
+substack_feed_validator.py
+substack_theme_discovery.py
+archives/
 
 # Environment variables (contains API keys - NEVER commit!)
 .env
@@ -54,7 +57,11 @@ desktop.ini
 *.db
 *.sqlite
 *.sqlite3
+*.sql
 
 # Backup files
 *.bak
 *.backup
+
+# json files
+*.json
