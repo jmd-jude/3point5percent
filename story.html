@@ -76,6 +76,20 @@
       color: #8b4513;
     }
 
+    .nav-links a.preview-link {
+      background: #8b4513;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-links a.preview-link:hover {
+      background: #5d4e37;
+      color: white;
+    }
+
     /* Sections */
     section {
       padding: 5rem 0;
@@ -112,6 +126,14 @@
       line-height: 1.7;
     }
 
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     .cta-button {
       display: inline-block;
       background: #8b4513;
@@ -129,6 +151,25 @@
       background: #5d4e37;
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+    }
+
+    .secondary-button {
+      display: inline-block;
+      background: transparent;
+      color: #8b4513;
+      padding: 1rem 2rem;
+      border: 2px solid #8b4513;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+
+    .secondary-button:hover {
+      background: #8b4513;
+      color: white;
+      transform: translateY(-2px);
     }
 
     /* Content Sections */
@@ -267,6 +308,25 @@
       line-height: 1.6;
     }
 
+    .preview-section {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #f1f5f9;
+      border-radius: 12px;
+    }
+
+    .preview-section h3 {
+      color: #1e293b;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .preview-section p {
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
     .why-matters {
       background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
     }
@@ -372,6 +432,18 @@
       margin-top: 1rem;
     }
 
+    .subscribe-alternatives {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .subscribe-alternatives p {
+      color: #6b7280;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
     /* Footer */
     footer {
       background: #f8fafc;
@@ -391,12 +463,28 @@
         font-size: 1.2rem;
       }
 
+      .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .hero-buttons .cta-button,
+      .hero-buttons .secondary-button {
+        min-width: 280px;
+      }
+
       .nav-links {
         gap: 1rem;
+        flex-wrap: wrap;
       }
 
       .nav-links a {
         font-size: 0.9rem;
+      }
+
+      .nav-links a.preview-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
       }
 
       .problem-content,
@@ -453,6 +541,7 @@
           <a href="#stories">What You'll Get</a>
           <a href="#why">Why It Matters</a>
           <a href="#subscribe">Subscribe</a>
+          <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="preview-link">Preview →</a>
         </div>
       </nav>
     </div>
@@ -468,7 +557,10 @@
           But change is happening in city halls, courtrooms, faith communities and neighborhoods across the country. 
           Stories of ordinary people creating extraordinary change from wherever they stand.
         </p>
-        <a href="#subscribe" class="cta-button">Get Stories You Probably Ain't Seeing on Social →</a>
+        <div class="hero-buttons">
+          <a href="#subscribe" class="cta-button">Get Stories You Probably Ain't Seeing on Social →</a>
+          <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="secondary-button">See a Sample Issue First</a>
+        </div>
       </div>
     </section>
 
@@ -570,6 +662,12 @@
             <p>How neighborhoods support each other through crisis, disaster relief efforts that work, and communities building the world they want to see.</p>
           </div>
         </div>
+
+        <div class="preview-section">
+          <h3>See These Story Types in Action</h3>
+          <p>Want to see exactly what a 3½ Percent newsletter looks like? Check out our sample issue featuring real stories of communities creating change.</p>
+          <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="cta-button">Browse Sample Newsletter →</a>
+        </div>
       </div>
     </section>
 
@@ -615,6 +713,11 @@
           <p class="form-note">
             Free newsletter • No spam, ever • Unsubscribe anytime
           </p>
+          
+          <div class="subscribe-alternatives">
+            <p>Want to see what you're signing up for first?</p>
+            <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="secondary-button">Browse Sample Issue</a>
+          </div>
         </div>
       </div>
     </section>
