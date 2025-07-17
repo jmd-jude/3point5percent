@@ -1,13 +1,14 @@
 # Automation scripts (keep pipeline private)
-news_discovery_rss.py
-news_categorizer.py
-news_newsletter_generator.py
-debug_sources.py
+article_categorizer.py
+article_collector.py
+newsletter_writer.py
 google_feed_builder.py
-google_news_feeds.sql
-google_news_feeds.json
 substack_feed_validator.py
-substack_theme_discovery.py
+substack_feed_discovery.py
+debug_sources.py
+base_config.py
+config_3point5percent.py
+streamlit_app.py
 archives/
 
 # Environment variables (contains API keys - NEVER commit!)
