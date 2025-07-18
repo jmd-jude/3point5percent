@@ -9,6 +9,7 @@ debug_sources.py
 base_config.py
 config_3point5percent.py
 streamlit_app.py
+app.py
 archives/
 
 # Environment variables (contains API keys - NEVER commit!)
