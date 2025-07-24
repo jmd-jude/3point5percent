@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>3½ Percent: Stories of Change in Action</title>
+  <meta name="description" content="While attention platforms keep us focused on what's breaking, we want to find what's building. Stories of communities pushing for, and getting, results.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e5e5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #8b4513;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #5d4e37;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #8b4513;
+    }
+
+    .nav-links a.preview-link {
+      background: #8b4513;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-links a.preview-link:hover {
+      background: #5d4e37;
+      color: white;
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 0;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f7f3e9 0%, #e8dcc6 100%);
+      text-align: center;
+      padding: 8rem 0 6rem 0;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-family: 'Crimson Text', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .hero .subtitle {
+      font-size: 1.4rem;
+      color: #5d4e37;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .hero .description {
+      font-size: 1.1rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto 3rem auto;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #8b4513;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+    }
+
+    .cta-button:hover {
+      background: #5d4e37;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+    }
+
+    .secondary-button {
+      display: inline-block;
+      background: transparent;
+      color: #8b4513;
+      padding: 1rem 2rem;
+      border: 2px solid #8b4513;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+
+    .secondary-button:hover {
+      background: #8b4513;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Content Sections */
+    .section-title {
+      font-family: 'Crimson Text', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #64748b;
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .problem {
+      background: white;
+    }
+
+    .problem-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .problem-text h3 {
+      font-size: 1.8rem;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .problem-text p {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .problem-visual {
+      background: #fee2e2;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .problem-visual .emoji {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .problem-visual h4 {
+      color: #dc2626;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .solution {
+      background: linear-gradient(135deg, #faf7f2 0%, #f0ede5 100%);
+    }
+
+    .solution-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .solution-visual {
+      background: #dcfce7;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .solution-visual .emoji {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .solution-visual h4 {
+      color: #059669;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .what-you-get {
+      background: white;
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .story-card {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 2rem;
+      border-left: 4px solid #8b4513;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .story-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .story-card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .story-card h4 {
+      color: #1e293b;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .story-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .preview-section {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #f1f5f9;
+      border-radius: 12px;
+    }
+
+    .preview-section h3 {
+      color: #1e293b;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .preview-section p {
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
+    .why-matters {
+      background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    }
+
+    .why-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .why-content .highlight {
+      background: #8b4513;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .research-note {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-left: 4px solid #f59e0b;
+    }
+
+    .research-note h4 {
+      color: #92400e;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .research-note p {
+      color: #78350f;
+      font-style: italic;
+    }
+
+    .subscribe {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+    }
+
+    .subscribe .section-title {
+      color: white;
+    }
+
+    .subscribe .section-subtitle {
+      color: #cbd5e1;
+    }
+
+    .subscribe-form {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .email-group {
+      display: flex;
+      gap: 0;
+      margin-bottom: 1rem;
+    }
+
+    .email-input {
+      flex: 1;
+      padding: 1rem 1.5rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px 0 0 8px;
+      font-size: 1rem;
+      background: #fafafa;
+    }
+
+    .email-input:focus {
+      outline: none;
+      border-color: #8b4513;
+      background: white;
+    }
+
+    .subscribe-btn {
+      padding: 1rem 2rem;
+      background: #8b4513;
+      color: white;
+      border: 2px solid #8b4513;
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .subscribe-btn:hover {
+      background: #5d4e37;
+      border-color: #5d4e37;
+    }
+
+    .form-note {
+      font-size: 0.9rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .subscribe-alternatives {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .subscribe-alternatives p {
+      color: #6b7280;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #f8fafc;
+      color: #64748b;
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .hero-buttons .cta-button,
+      .hero-buttons .secondary-button {
+        min-width: 280px;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+
+      .nav-links a.preview-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+      }
+
+      .problem-content,
+      .solution-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .email-group {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .email-input,
+      .subscribe-btn {
+        border-radius: 8px;
+      }
+
+      section {
+        padding: 3rem 0;
+      }
+    }
+
+    /* Subtle animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
+      animation: fadeInUp 0.8s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#hero" class="logo">3½ Percent</a>
+        <div class="nav-links">
+          <a href="#problem">The Mess</a>
+          <a href="#solution">Our Idea</a>
+          <a href="#stories">What You'll Get</a>
+          <a href="#why">Why It Matters</a>
+          <a href="#subscribe">Subscribe</a>
+          <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="preview-link">Preview →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1>Attention Platforms Keep Us Focused on What's Breaking,<br>We Want to Find What's Building</h1>
+        <p class="subtitle">Stories of individuals and communities pushing for, and getting, results</p>
+        <p class="description">
+          In a world that feels increasingly divided, overwhelming, and algorithmic, it can be hard to find stories of action. 
+          But change is happening in city halls, courtrooms, faith communities and neighborhoods across the country. 
+          Stories of ordinary people creating extraordinary change from wherever they stand.
+        </p>
+        <div class="hero-buttons">
+          <a href="#subscribe" class="cta-button">Get Stories You Probably Ain't Seeing on Social →</a>
+          <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="secondary-button">See a Sample Issue First</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="problem">
+      <div class="container">
+        <h2 class="section-title">The Mess (Opportunity!)</h2>
+        <p class="section-subtitle">Algorithmic news leaves us feeling helpless and overwhelmed</p>
+        
+        <div class="problem-content" style="grid-template-columns: 1fr;">
+          <div class="problem-text">
+            <h3>Feeling Used by the News?</h3>
+            <p>
+              All day, the Attention Platforms deliver streams of overwhelming headlines. Federal policies that feel wrong. 
+              Stories that make you angry or worried. Problems that seem too big to solve. And they do it on purpose because your attention is their product.
+            </p>
+            <p>
+              It's easy to feel like nothing you do matters. Like change is impossible. 
+              Like you're powerless to even make a contribution, however big or small.
+            </p>
+            <p>
+              <strong>But here's what the algorithmic attention economy misses:</strong> While platforms feature what's breaking down, 
+              constructive things are being built up. Every. Single. Day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="solution">
+      <div class="container">
+        <h2 class="section-title">Our Idea</h2>
+        <p class="section-subtitle">We find the stories that demonstrate change is possible</p>
+        
+        <div class="solution-content">
+          <div class="solution-visual">
+            <span class="emoji">🌱</span>
+            <h4>Stories That Inspire Action</h4>
+            <p>Real communities → Real stories → Real change</p>
+          </div>
+          <div class="problem-text">
+            <h3>We Look For What Else Is Going On</h3>
+            <p>
+              Every week, we find the stories that demonstrate what's possible. 
+              The legal victories protecting rights. The spiritual communities providing sanctuary. 
+              Local governments standing up for their values.
+            </p>
+            <p>
+              These are real communities solving real problems, 
+              creating real change. They're evidence that when ordinary people organize, 
+              extraordinary things happen.
+            </p>
+            <p>
+              <strong>Think of it as your regular reminder:</strong> If they can do it, so can we.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="what-you-get">
+      <div class="container">
+        <h2 class="section-title">What You'll Find in Every Issue</h2>
+        <p class="section-subtitle">Real stories of folks taking action and creating results</p>
+        
+        <div class="stories-grid">
+          <div class="story-card">
+            <span class="icon">🎓</span>
+            <h3>Individual Courage</h3>
+            <p>Teachers, healthcare workers, public servants, and ordinary citizens choosing conscience when it matters most, regardless of the source of pressure.</p>
+          </div>
+
+          <div class="story-card">
+            <span class="icon">⚖️</span>
+            <h3>Legal Victories</h3>
+            <p>Strategic court cases blocking policies communities oppose, constitutional challenges protecting rights, and legal advocates winning battles that seemed impossible.</p>
+          </div>
+          
+          <div class="story-card">
+            <span class="icon">🏛️</span>
+            <h3>Local Government Innovation</h3>
+            <p>City councils, mayors, and state governments creating policies that reflect their communities' values and protect their residents.</p>
+          </div>
+          
+          <div class="story-card">
+            <span class="icon">🤝</span>
+            <h3>Grassroots Organizing</h3>
+            <p>Community groups, mutual aid networks, and neighborhood coalitions solving problems through collective action and creative solutions.</p>
+          </div>
+          
+          <div class="story-card">
+            <span class="icon">⛪</span>
+            <h3>Spiritual Communities in Action</h3>
+            <p>Churches, mosques, and synagogues adapting their ministries to protect vulnerable neighbors and provide sanctuary when their communities face threats.</p>
+          </div>
+          
+          <div class="story-card">
+            <span class="icon">🌍</span>
+            <h3>Community Resilience</h3>
+            <p>How neighborhoods support each other through crisis, disaster relief efforts that work, and communities building the world they want to see.</p>
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <h3>See These Story Types in Action</h3>
+          <p>Want to see exactly what a 3½ Percent newsletter looks like? Check out our sample issue featuring real stories of communities creating change.</p>
+          <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="cta-button">Browse Sample Newsletter →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="why-matters">
+      <div class="container">
+        <h2 class="section-title">Why We're Here</h2>
+        <div class="why-content">
+          <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+            Research shows that when just <span class="highlight">3½ percent of a population</span> 
+            actively participates in sustained campaigns, they create inevitable change.
+          </p>
+          <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+            Across the country, millions of people 
+            are already doing the work. They're organizing in their congregations, running for local office, 
+            supporting their neighbors, and building the foundations for the change we need. We want to contribute to elevating them.
+          </p>
+          <p style="font-size: 1.1rem;">
+            <strong>The question isn't whether change is possible. The question is whether you can see it happening.</strong>
+          </p>
+          
+          <div class="research-note">
+            <h4>The Research</h4>
+            <p>
+              Political scientist Erica Chenoweth found that no nonviolent campaign has failed 
+              when 3½% of the population actively participated. We track the communities and 
+              movements building toward that critical mass.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subscribe" class="subscribe">
+      <div class="container">
+        <h2 class="section-title">Sign Up</h2>
+        <p class="section-subtitle">Join readers who choose hope over helplessness</p>
+        
+        <div class="subscribe-form">
+          <div class="email-group">
+            <input type="email" class="email-input" placeholder="Enter your email address" id="email-signup">
+            <button type="button" class="subscribe-btn" onclick="redirectToSubstack()">Subscribe Free</button>
+          </div>
+          <p class="form-note">
+            Free newsletter • No spam, ever • Unsubscribe anytime
+          </p>
+          
+          <div class="subscribe-alternatives">
+            <p>Want to see what you're signing up for first?</p>
+            <a href="https://3point5percent.substack.com/p/3point5percent-issue-1" target="_blank" class="secondary-button">Browse Sample Issue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>3½ Percent</strong> • Stories of communities acting and building toward change</p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+        Published independently • Not affiliated with any political organization
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function redirectToSubstack() {
+      const email = document.getElementById('email-signup').value;
+      if (email && email.includes('@')) {
+        window.open(`https://3point5percent.substack.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
+      } else {
+        window.open('https://3point5percent.substack.com/subscribe', '_blank');
+      }
+    }
+
+    // Allow Enter key to submit
+    document.addEventListener('DOMContentLoaded', function() {
+      const emailInput = document.getElementById('email-signup');
+      if (emailInput) {
+        emailInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            redirectToSubstack();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

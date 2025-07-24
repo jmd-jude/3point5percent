@@ -1,0 +1,70 @@
+# Automation scripts (keep pipeline private)
+article_categorizer.py
+article_collector.py
+newsletter_writer.py
+google_feed_builder.py
+substack_feed_validator.py
+substack_feed_discovery.py
+debug_sources.py
+base_config.py
+config_3point5percent.py
+streamlit_app.py
+app.py
+google_feed_insertion.py
+archives/
+
+# Environment variables (contains API keys - NEVER commit!)
+.env
+.env.local
+.env.production
+
+# Python virtual environment
+news_venv/
+venv/
+env/
+.venv/
+
+# Personal notes
+notes.txt
+notes.md
+docs/
+
+# Newsletters
+newsletters/
+/newsletters
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Database files (if any)
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Backup files
+*.bak
+*.backup
+
+# json files
+*.json
